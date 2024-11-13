@@ -46,8 +46,5 @@ it('cy.get(), cy.find(), cy.children()', () => {
   cy.get('form').find('button[type="submit"]').should('contain', 'Sign up').and('be.enabled'); 
 });
   
-  
-
-// new update
 
    }); 
