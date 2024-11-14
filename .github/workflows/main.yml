@@ -11,6 +11,10 @@ jobs:
         with:
           node-version: '14'
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install cypress --save-dev  # Ensure Cypress is installed
+      - name: Clear Cypress cache (optional)
+        run: npx cypress cache clear  # Optional: to avoid cache-related issues
       - name: Run Cypress tests
         run: npx cypress run
