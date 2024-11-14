@@ -14,7 +14,14 @@ jobs:
         run: |
           npm install
           npm install cypress --save-dev  # Ensure Cypress is installed
-      - name: Clear Cypress cache (optional)
-        run: npx cypress cache clear  # Optional: to avoid cache-related issues
+      - name: Cache Cypress binary
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-cypress-
+      - name: Install Cypress binary
+        run: npx cypress install  # Ensures the Cypress binary is downloaded
       - name: Run Cypress tests
         run: npx cypress run
