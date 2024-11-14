@@ -45,7 +45,7 @@ describe('Registration Page', () => {
 
 // cy.get(''), find(''), 
   
-it('cy.get(), cy.find(), cy.children()', () => {
+it('cy.get(), .find(),', () => {
   
   cy.visit('https://demo.productionready.io/#/register');
 
