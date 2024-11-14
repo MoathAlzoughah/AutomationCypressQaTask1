@@ -1,4 +1,4 @@
-describe('Registration Page Selectors', () => {
+describe('Registration Page', () => {
 
   // cy.contains('')
   
