@@ -41,7 +41,7 @@ it ('Add 2 random items and delete 1 of them and update the shopping cart.', () 
     cy.contains("View and Edit Cart").click()
     cy.get("[title='Remove item']").eq(1).click({force: true});
     cy.wait(2000)
-    cy.contains("Update Shopping Cart").click()
+    cy.contains("Update Shopping Cart").click({force: true})
 });
 
 after(()=>{
