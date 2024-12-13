@@ -28,8 +28,8 @@ Then("Print the names of these categories", () => {
        
 cy.get('.categories-menu li').then((categories) => {
             
-    for (let i = 0; i < 6; ) {categories[12]
-        cy.wrap(categories[i++]).invoke('text').then((categoryName) => {
+    for (let i = 0; i < 6;i++ ) {categories[12]
+        cy.wrap(categories[i]).invoke('text').then((categoryName) => {
         cy.log(categoryName);
 
      });
